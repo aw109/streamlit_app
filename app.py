@@ -3,6 +3,7 @@ import streamlit as st
 import string
 import pickle
 import contractions
+import sklearn
 import nltk
 nltk.download('omw-1.4')
 nltk.download('stopwords')
@@ -24,8 +25,6 @@ def cleanData(input):
   df_train['title+review_clean'] = df_train['title+review_clean'].apply(lambda x: ' '.join([lemmatizer.lemmatize(word,pos='v') for word in x.split()]))
 
   return df_train['title+review_clean'][0]
-
-
 
 st.title("Amazon Review Sentiment")
 input = st.text_area("Enter your review", "This was a great purchase!")
