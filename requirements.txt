@@ -1,5 +1,2 @@
 streamlit
 pandas
-pickle
-contractions
-nltk
