@@ -3,13 +3,13 @@ import streamlit as st
 import string
 import pickle
 import contractions
-import sklearn
 import nltk
 nltk.download('omw-1.4')
 nltk.download('stopwords')
 nltk.download('wordnet')
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
+from sklearn.linear_model import LogisticRegression
 lemmatizer = WordNetLemmatizer()
 stopWords = set(stopwords.words('english')) - set(['not'])
 
