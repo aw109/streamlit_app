@@ -2,4 +2,4 @@ streamlit
 pandas
 contractions
 nltk
-sklearn
+scikit-learn
